@@ -51,33 +51,5 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
-    },
-    zinputContainer: {
-        //flex: 1,
-        width: "100%",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center"
-    },
-    zwelcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10,
-    },
-    zinstructions: {
-        textAlign: 'center',
-        color: '#333333',
-        marginBottom: 5,
-    },
-    zplaceInput: {
-        width: "70%"
-
-    },
-    zplaceButton: {
-        width: "30%"
-
-    },
-    zlistContainer: {
-        width: "100%"
     }
 });
