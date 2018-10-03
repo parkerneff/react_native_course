@@ -10,6 +10,7 @@ import React, {Component} from 'react';
 import {StyleSheet, View} from 'react-native';
 import PlaceInput from "./src/components/PlaceInput/PlaceInput";
 import PlaceList from "./src/components/PlaceList/PlaceList";
+import placeImage from './src/assets/lanai-760x500.jpg';
 
 
 type Props = {};
@@ -24,7 +25,12 @@ export default class App extends Component<Props> {
 
         this.setState(prevState => {
             return {
-                places: prevState.places.concat({key: String(Math.random()), value: placeName})
+                places: prevState.places.concat(
+                    {
+                        key: String(Math.random()),
+                        name: placeName,
+                        image: placeImage
+                    })
             };
         });
     };
