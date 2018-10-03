@@ -7,10 +7,9 @@
  */
 
 import React, {Component} from 'react';
-import { StyleSheet,  View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import PlaceInput from "./src/components/PlaceInput/PlaceInput";
 import PlaceList from "./src/components/PlaceList/PlaceList";
-
 
 
 type Props = {};
@@ -33,15 +32,11 @@ export default class App extends Component<Props> {
     placeDeletedHandler = index => {
         this.setState(prevState => {
             return {
-               places: prevState.places.filter((place, i) => {
-                   return i !== index;
-                   }
-
-               )
+                places: prevState.places.filter((place, i) => {
+                    return i !== index;
+                })
             };
-            }
-
-        );
+        });
     };
 
     render() {
@@ -50,7 +45,7 @@ export default class App extends Component<Props> {
             <View style={styles.container}>
                 <PlaceInput onPlaceAdded={this.placeAddedHandler}/>
 
-                <PlaceList places={this.state.places} onItemDeleted={this.placeDeletedHandler} />
+                <PlaceList places={this.state.places} onItemDeleted={this.placeDeletedHandler}/>
 
 
             </View>
