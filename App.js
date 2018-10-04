@@ -10,7 +10,6 @@ import React, {Component} from 'react';
 import {StyleSheet, View} from 'react-native';
 import PlaceInput from "./src/components/PlaceInput/PlaceInput";
 import PlaceList from "./src/components/PlaceList/PlaceList";
-import placeImage from './src/assets/lanai-760x500.jpg';
 
 
 type Props = {};
@@ -29,7 +28,9 @@ export default class App extends Component<Props> {
                     {
                         key: String(Math.random()),
                         name: placeName,
-                        image: placeImage
+                        image: {
+                            uri: "https://www.rd.com/wp-content/uploads/2018/04/lanai-400x400.jpg"
+                        }
                     })
             };
         });
