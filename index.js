@@ -1,20 +1,13 @@
-/** @format */
+import { Navigation } from 'react-native-navigation';
 
-import React from 'react';
-import {AppRegistry} from 'react-native';
-import App from './App';
-import {name as appName} from './app.json';
-import {Provider} from 'react-redux';
-import configureStore from './src/store/configureStore';
+import { registerScreens } from './src/screens';
 
-const store = configureStore();
+registerScreens(); // this is where you register all of your app's screens
 
-const RNRedux = () => (
-
-    <Provider store={store} >
-        <App/>
-    </Provider>
-
-);
-
-AppRegistry.registerComponent(appName, () => RNRedux);
+// start the app
+Navigation.startSingleScreenApp({
+    screen: {
+        screen: "places.AuthScreen",
+        title: "Login"
+    }
+});
