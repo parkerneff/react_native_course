@@ -17,6 +17,6 @@ export function registerScreens() {
     Navigation.registerComponent('places.AuthScreen', () => AuthScreen, store, Provider);
     Navigation.registerComponent('places.SharePlaceScreen', () => SharePlaceScreen, store, Provider);
     Navigation.registerComponent('places.FindPlaceScreen', () => FindPlaceScreen, store, Provider);
-    Navigation.registerComponent('places.PlaceDetailScreen', () => PlaceDetailScreen);
+    Navigation.registerComponent('places.PlaceDetailScreen', () => PlaceDetailScreen, store, Provider);
 
 }
