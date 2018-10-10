@@ -6,6 +6,7 @@ import SharePlaceScreen from "./SharePlace/SharePlace";
 import FindPlaceScreen from "./FindPlace/FindPlace";
 import PlaceDetailScreen from "./PlaceDetail/PlaceDetail";
 import configureStore from "../store/configureStore";
+import SideDrawer from "./SideDrawer/SideDrawer";
 
 
 
@@ -18,5 +19,7 @@ export function registerScreens() {
     Navigation.registerComponent('places.SharePlaceScreen', () => SharePlaceScreen, store, Provider);
     Navigation.registerComponent('places.FindPlaceScreen', () => FindPlaceScreen, store, Provider);
     Navigation.registerComponent('places.PlaceDetailScreen', () => PlaceDetailScreen, store, Provider);
+    Navigation.registerComponent('places.SideDrawer', () => SideDrawer);
+
 
 }
